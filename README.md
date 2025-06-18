@@ -9,7 +9,7 @@
 - 可视化预览 Box 位置，便于调整
 
 ## 🛠️ 使用方法 How to Use
-- 在线使用（GitHub Pages）：[your_link_here]
+- 在线使用（GitHub Pages）：[https://yvonnej18.github.io/tableau-tools/]
 - 本地打开：双击 `convert.html` 直接使用，无需服务器
 
 ## 🚀 部署到 GitHub Pages
