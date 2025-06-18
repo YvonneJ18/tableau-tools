@@ -5,6 +5,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tableau Container 坐标-PPT Layout 转换工具</title>
 <link rel="stylesheet" href="style.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+  }
+  #leftPanel {
+    width: 420px;
+    padding: 20px;
+    background: #f5f8fa;
+    border-right: 1px solid #ccc;
+    overflow-y: auto;
+    box-sizing: border-box;
+    flex-shrink: 0;
+  }
+  #rightCanvasContainer {
+    flex-grow: 1;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+  }
+  canvas {
+    border: 1px solid #aaa;
+    background: #fff;
+  }
+</style>
 </head>
 <body>
 
