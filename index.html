@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tableau Container 坐标-PPT Layout 转换工具</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="leftPanel">
+  <h2>🎯Tableau Container 坐标-PPT Layout 转换工具</h2>
+  <h3>PowerPoint 页面尺寸</h3>
+  <div class="btn-group powerpoint" id="pptSizeGroup">
+    <button data-size="standard" class="selected">Standard (4:3)</button>
+    <button data-size="widescreen">Widescreen (16:9)</button>
+  </div>
+
+  <h3>Tableau 视图缩放(px)</h3>
+  <div class="btn-group tableau" id="tableauScaleGroup">
+    <!-- 自动生成 -->
+  </div>
+
+  <h3>TextBox 位置和尺寸 (inch)</h3>
+  <div class="input-group">
+    <div class="label-row">
+      <label for="textboxX">X</label>
+      <label for="textboxY">Y</label>
+      <label for="textboxWidth">Width</label>
+      <label for="textboxHeight">Height</label>
+    </div>
+    <div class="input-row">
+      <input type="number" id="posX" step="0.01" value="1.00" />
+      <input type="number" id="posY" step="0.01" value="1.00" />
+      <input type="number" id="width" step="0.01" value="9.57" />
+      <input type="number" id="height" step="0.01"value="0.87" />
+    </div>
+  </div>
+
+  <h3>TextBox Margin (inch)</h3>
+  <div class="input-group">
+    <div class="label-row">
+      <label for="textboxX">Top</label>
+      <label for="textboxY">Left</label>
+      <label for="textboxWidth">Bottom</label>
+      <label for="textboxHeight">Right </label>
+    </div>
+    <div class="input-row">
+      <input type="number" id="marginTop" step="0.01" value="0" />
+      <input type="number" id="marginLeft" step="0.01" value="0" />
+      <input type="number" id="marginBottom" step="0.01" value="0" />
+      <input type="number" id="marginRight" step="0.01"value="0" />
+    </div>
+  </div>
+
+  <button id="calcBtn">计算 Container 坐标和尺寸</button>
+
+  <h3>Container坐标和尺寸(px)</h3>
+  <div id="result">
+    <div><b>X:</b></div><div id="resultX">---</div>
+    <div><b>Y:</b></div><div id="resultY">---</div>
+    <div><b>Width:</b></div><div id="resultWidth">---</div>
+    <div><b>Height:</b></div><div id="resultHeight">---</div>
+  </div>
+</div>
+
+<div id="rightCanvasContainer">
+  <canvas id="previewCanvas"></canvas>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

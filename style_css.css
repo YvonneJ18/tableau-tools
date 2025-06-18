@@ -1,0 +1,113 @@
+<style>
+  body {
+    margin: 0; padding: 0;
+    display: flex; height: 100vh;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+  }
+  #leftPanel {
+    width: 420px; flex-shrink: 0;
+    padding: 20px;
+    background: #f5f8fa;
+    border-right: 1px solid #ccc;
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+  #rightCanvasContainer {
+    flex-grow: 1;
+    background: #fff; /* 右侧画布背景为白色 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+  }
+  canvas {
+    background: white;
+    border: 1px solid #aaa;
+  }
+  h2, h3 {
+    margin: 0 0 10px;
+  }
+  .btn-group {
+    display: flex; gap: 10px; margin-bottom: 20px;
+  }
+  .btn-group.powerpoint button {
+    flex: 1; padding: 8px;
+    border: 2px solid #05628A;
+    background: white; color: #05628A;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color .3s;
+    white-space: nowrap;
+  }
+  .btn-group.powerpoint button.selected {
+    background: #05628A; color: white; font-weight: bold;
+  }
+  .btn-group.tableau {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  .btn-group.tableau button {
+    padding: 8px;
+    border: 1.5px solid #4A90E2;
+    background: white; color: #4A90E2;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .2s;
+    white-space: nowrap;
+  }
+  .btn-group.tableau button.selected {
+    background: #4A90E2; color: white; font-weight: bold;
+  }
+  .input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+.label-row,
+.input-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.label-row label {
+  font-weight: 500;
+  font-size: 14px;
+}
+.input-row input {
+  width: 100%;
+  padding: 4px 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+  .grid-2x2 {
+    display: grid;
+    grid-template-columns:2fr 2fr;
+    gap:10px 20px;
+    margin-bottom:20px;
+  }
+  .grid-2x2 input {
+    width:100%;
+    box-sizing:border-box;
+    padding:6px;
+  }
+  #calcBtn {
+    width:100%; padding:10px;
+    background:#05628A; color:white;
+    border:none; border-radius:4px;
+    cursor:pointer; margin-bottom:20px;
+  }
+  #result {
+    display:grid; grid-template-columns:1fr 1fr;
+    gap:8px 16px;
+    padding:12px; border:2px solid #05628A;
+    border-radius:6px; background:white;
+    font-size:16px; margin-top:10px;
+  }
+  #result b { font-weight:bold; }
+  /* 拖拽用的提示样式 */
+  #previewCanvas { cursor: move; }
+</style>
