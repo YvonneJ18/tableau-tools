@@ -72,7 +72,7 @@ const pptSizes = {
   // 右侧画布根据PowerPoint页面尺寸和0.75等比缩放调整
   function resizeCanvasAndRedraw() {
     const base = pptSizes[selectedPpt];
-    const scaleForCanvas = 0.75;
+    const scaleForCanvas = 1;
     let W = base.w * scaleForCanvas;
     let H = base.h * scaleForCanvas;
 
